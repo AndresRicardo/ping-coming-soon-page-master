@@ -1,0 +1,169 @@
+// color Primary
+$colorBlue: hsl(223, 87%, 63%);
+
+//color Secondary
+$colorPaleBlue: hsl(223, 100%, 88%);
+$colorLightRed: hsl(354, 100%, 66%);
+
+// color Neutral
+$colorGray: hsl(0, 0%, 59%);
+$colorVeryDarkBlue: hsl(209, 33%, 12%);
+
+// Typography
+$typFontsize: 20px;
+
+$typFontFamily: "Libre Franklin", sans-serif; //[Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+$typWeightLight: 300;
+$typWeightSemiBold: 600;
+$typWeightBold: 700;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: $typFontFamily;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorVeryDarkBlue;
+    font-size: $typFontsize;
+}
+
+#container {
+    width: 375px;
+    padding: 90px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    #hero {
+        width: 17%;
+        img {
+            width: 100%;
+        }
+    }
+
+    #title {
+        width: 75%;
+        margin: 35px 0px 0px 0px;
+        font-size: 1.3em;
+        font-weight: 300;
+        color: $colorGray;
+
+        strong {
+            font-weight: $typWeightSemiBold;
+            color: $colorVeryDarkBlue;
+            font-weight: $typWeightBold;
+        }
+    }
+
+    #subscribe {
+        width: 75%;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    #subscribe {
+        width: 75%;
+        margin-top: 30px;
+    }
+
+    #form {
+        width: 75%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: yellowgreen;
+
+        #inputEmail {
+            width: 100%;
+            height: 45px;
+            border-radius: 30px;
+            border: 1px solid $colorPaleBlue;
+            text-align: left;
+            padding-left: 35px;
+            color: $colorGray;
+            font-size: 0.7em;
+        }
+
+        #errorMsg {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            color: $colorLightRed;
+            font-size: 0.6em;
+        }
+
+        #submit {
+            width: 100%;
+            height: 45px;
+            margin-top: 30px;
+            border-radius: 30px;
+            border: none;
+            background-color: $colorBlue;
+            color: white;
+            text-align: center;
+            font-size: 0.7em;
+            font-weight: $typWeightSemiBold;
+        }
+    } //fin form
+
+    #ilustration {
+        width: 85%;
+        margin-top: 35px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    #social {
+        width: 35%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            border: 1px solid $colorGray;
+
+            img {
+                width: 50%;
+            }
+        }
+    } //fin social
+
+    #copy {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0.6em;
+        color: $colorGray;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $colorBlue;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
