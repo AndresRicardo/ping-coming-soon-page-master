@@ -163,10 +163,13 @@ body {
         }
         .icon:hover {
             cursor: pointer;
+            img {
+                width: 54%;
+            }
         }
         .icon:active {
             img {
-                width: 52%;
+                width: 50%;
             }
         }
     } //fin social
@@ -254,6 +257,21 @@ body {
         #ilustration {
             width: 100%;
             margin-top: 70px;
+        }
+
+        #social {
+            width: 30%;
+
+            .icon:hover {
+                img {
+                    width: 70%;
+                }
+            }
+            .icon:active {
+                img {
+                    width: 50%;
+                }
+            }
         }
 
         #copy {
