@@ -29,17 +29,23 @@
     <p id="subscribe">Subscribe and get notified</p>
 
     <form action="" id="form">
-      <input type="email" name="email" id="inputEmail" placeholder="Your email address...">
-      <div id="errorMsg">Please provide a valid email address</div>
+      <div id="inputAndMsg">
+        <input type="email" name="email" id="inputEmail" placeholder="Your email address...">
+        <div class="message" id="errorMsg">Please provide a valid email address</div>
+        <div class="message" id="successMsg">Email valid</div>
+      </div>
       <button type="submit" id="submit">Notify Me</button>
     </form>
 
     <div id="ilustration"><img src="images/illustration-dashboard.png" alt="dashboard_ilustration"></div>
 
     <div id="social">
-      <div class="icon"><img src="images/icon-facebook.svg" alt="facebook"></div>
-      <div class="icon"><img src="images/icon-twitter.svg" alt="twitter"></div>
-      <div class="icon"><img src="images/icon-instagram.svg" alt="instagram"></div>
+      <a class="icon" href="https://www.facebook.com" target="_blank"><img src="images/icon-facebook.svg"
+          alt="facebook"></a>
+      <a class="icon" href="https://www.twitter.com" target="_blank"><img src="images/icon-twitter.svg"
+          alt="twitter"></a>
+      <a class="icon" href="https://www.instagram.com" target="_blank"><img src="images/icon-instagram.svg"
+          alt="instagram"></a>
     </div>
 
     <p id="copy">&copy; Copyright Ping. All rights reserved.</p>

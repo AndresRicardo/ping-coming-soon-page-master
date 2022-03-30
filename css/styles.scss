@@ -4,6 +4,7 @@ $colorBlue: hsl(223, 87%, 63%);
 //color Secondary
 $colorPaleBlue: hsl(223, 100%, 88%);
 $colorLightRed: hsl(354, 100%, 66%);
+$colorLightGreen: hsl(103, 63%, 49%);
 
 // color Neutral
 $colorGray: hsl(0, 0%, 59%);
@@ -67,13 +68,9 @@ body {
 
     #subscribe {
         width: 75%;
+        margin-top: 30px;
         font-size: 0.7em;
         text-align: center;
-    }
-
-    #subscribe {
-        width: 75%;
-        margin-top: 30px;
     }
 
     #form {
@@ -83,7 +80,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // background-color: yellowgreen;
 
         #inputEmail {
             width: 100%;
@@ -95,13 +91,23 @@ body {
             color: $colorGray;
             font-size: 0.7em;
         }
+        #inputEmail:focus {
+            border: none;
+            outline: 1px solid $colorBlue;
+        }
 
-        #errorMsg {
+        .message {
             width: 100%;
             margin-top: 10px;
             text-align: center;
-            color: $colorLightRed;
             font-size: 0.6em;
+            display: none;
+        }
+        #errorMsg {
+            color: $colorLightRed;
+        }
+        #successMsg {
+            color: $colorLightGreen;
         }
 
         #submit {
@@ -115,6 +121,14 @@ body {
             text-align: center;
             font-size: 0.7em;
             font-weight: $typWeightSemiBold;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: #4273f2;
+            // box-shadow: 2px 2px 5px $colorGray;
+        }
+        #submit:active {
+            font-size: 0.65em;
         }
     } //fin form
 
@@ -147,6 +161,14 @@ body {
                 width: 50%;
             }
         }
+        .icon:hover {
+            cursor: pointer;
+        }
+        .icon:active {
+            img {
+                width: 52%;
+            }
+        }
     } //fin social
 
     #copy {
@@ -155,7 +177,7 @@ body {
         font-size: 0.6em;
         color: $colorGray;
     }
-}
+} //fin container
 
 .attribution {
     font-size: 11px;
@@ -166,4 +188,89 @@ body {
         color: white;
         text-decoration: none;
     }
+} //fin attribution
+
+@media (min-width: 650px) {
+    body {
+        background-color: white;
+    }
+    #container {
+        width: 650px;
+
+        #hero {
+            width: 15%;
+        }
+
+        #title {
+            width: 100%;
+            margin: 45px 0px 0px 0px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        #subscribe {
+            width: 100%;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        #form {
+            width: 100%;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            #inputAndMsg {
+                width: 65%;
+
+                #inputEmail {
+                    width: 100%;
+                    height: 45px;
+
+                    padding-left: 35px;
+                    color: $colorGray;
+                    font-size: 0.8em;
+                }
+                .message {
+                    text-align: left;
+                    font-size: 0.7em;
+                    display: none;
+                }
+            }
+
+            #submit {
+                width: 32%;
+                height: 45px;
+                margin-top: 0px;
+                font-size: 0.8em;
+            }
+            #submit:active {
+                font-size: 0.7em;
+            }
+        } //fin form
+
+        #ilustration {
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        #copy {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.6em;
+            color: $colorGray;
+        }
+    } //fin container
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: $colorGray;
+
+        a {
+            color: $colorBlue;
+        }
+    } //fin attribution
 }
